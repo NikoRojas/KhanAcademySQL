@@ -1,0 +1,28 @@
+// Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want your store to specialize in. 
+You should have a table for all the items in your store, and at least 5 columns for the kind of data you think you'd need to store. 
+You should sell at least 15 items, and use select statements to order your items by price and show at least one statistic about the items. //
+
+CREATE TABLE clothing_store (id TEXT primary key, color TEXT, quantity INTEGER, price INTEGER, material TEXT);
+
+INSERT INTO clothing_store VALUES ("t-shirts", "red", 5, 19.99, "cotton");
+INSERT INTO clothing_store VALUES ("shorts", "kahki", 10, 24.99, "khaki");
+INSERT INTO clothing_store VALUES ("pants", "blue", 4, 54.99, "demim");
+INSERT INTO clothing_store VALUES ("underwear", "black", 30, 15.99, "silk");
+INSERT INTO clothing_store VALUES ('socks', 'black', 6, 8.99, 'cotton');
+INSERT INTO clothing_store VALUES ('flat-bill hat', 'black', 6, 18.99, 'polyester');
+INSERT INTO clothing_store VALUES ('cowboy hat', 'tan', 14, 38.99, 'leather');
+INSERT INTO clothing_store VALUES ('blazer', 'black', 3, 89.99, 'wool');
+INSERT INTO clothing_store VALUES ('slacks', 'black', 12, 79.99, 'wool');
+INSERT INTO clothing_store VALUES ('gloves', 'red', 2, 49.99, 'leather');
+INSERT INTO clothing_store VALUES ('beanie', 'white', 6, 9.99, 'cotton');
+INSERT INTO clothing_store VALUES ('pocket square', 'multicolor', 15, 24.99, 'silk');
+INSERT INTO clothing_store VALUES ('swim trunks', 'blue', 6, 19.99, 'nylon');
+INSERT INTO clothing_store VALUES ('button down tee', 'black', 3, 49.99, 'polyester');
+INSERT INTO clothing_store VALUES ('athletic shorts', 'green', 14, 19.99, 'nylon');
+
+// PART 2 //
+
+// Use select statements to order your items by price and show at least one statistic about the items. //
+
+SELECT * FROM clothing_store
+ORDER BY price;
