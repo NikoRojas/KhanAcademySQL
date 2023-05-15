@@ -1,0 +1,8 @@
+// Challenge: Book list database //
+// What are your favorite books? In this first step, create a table to store your list of books. It should have columns for id, name, and rating. //
+
+CREATE TABLE books (id INTEGER PRIMARY KEY, name TEXT, author TEXT, rating INTEGER);
+
+INSERT INTO books VALUES (1, "The 4-Hour Workweek", "Tim Ferris", 1);
+INSERT INTO books VALUES (2, "The Intelligent Investor", "Benjamin Graham", 2);
+INSERT INTO books VALUES (3, "Richest Man In Babylon", "George S. Clason", 3);
