@@ -1,0 +1,37 @@
+// In this project, you’re going to make your own table with some small set of “famous people”, then make more tables about things they do and join those to create nice human readable lists //
+
+CREATE TABLE ny_rappers (
+    id INTEGER PRIMARY KEY,
+    fullname TEXT, 
+    age INTEGER,
+    birth_city TEXT);
+    
+INSERT INTO ny_rappers (fullname, age, birth_city) VALUES ("A$AP Rocky", 34, "Harlem");
+INSERT INTO ny_rappers (fullname, age, birth_city) VALUES ("50 Cent", 47, "South Jamaica");
+INSERT INTO ny_rappers (fullname, age, birth_city) VALUES ("NAS", 49, "Crown Heights");
+INSERT INTO ny_rappers (fullname, age, birth_city) VALUES ("Dave East", 34, "East Harlem");
+INSERT INTO ny_rappers (fullname, age, birth_city) VALUES ("Fabolous", 45, "Brooklyn");
+INSERT INTO ny_rappers (fullname, age, birth_city) VALUES ("RZA", 53, "Brownsville");
+INSERT INTO ny_rappers (fullname, age, birth_city) VALUES ("Jay-Z", 53, "Brooklyn");
+INSERT INTO ny_rappers (fullname, age, birth_city) VALUES ("Method Man", 52, "Hampstead");
+
+
+CREATE TABLE net_worth (
+    id INTEGER PRIMARY KEY,
+    net_id INTEGER,
+    worth INTEGER,
+    num_of_albums INTEGER);
+
+INSERT INTO net_worth (net_id, worth, num_of_albums) VALUES (1, 20000000, 3);
+INSERT INTO net_worth (net_id, worth, num_of_albums) VALUES (2, 40000000, 5);
+INSERT INTO net_worth (net_id, worth, num_of_albums) VALUES (3, 70000000, 15);
+INSERT INTO net_worth (net_id, worth, num_of_albums) VALUES (4, 5000000, 1);
+INSERT INTO net_worth (net_id, worth, num_of_albums) VALUES (5, 8000000, 7);
+INSERT INTO net_worth (net_id, worth, num_of_albums) VALUES (6, 18000000, 4);
+INSERT INTO net_worth (net_id, worth, num_of_albums) VALUES (7, 2500000000, 13);
+INSERT INTO net_worth (net_id, worth, num_of_albums) VALUES (8, 14000000, 7);
+
+SELECT ny_rappers.fullname, net_worth.worth
+FROM ny_rappers
+JOIN net_worth
+ON ny_rappers.id = net_id;
